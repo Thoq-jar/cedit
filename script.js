@@ -117,6 +117,12 @@ function changeBackgroundColor() {
     document.getElementById("editor").style.backgroundColor = color;
 }
 
+function changeTextColor() {
+    var color = document.getElementById("bgColorPicker").value;
+    document.body.style.color = color;
+    document.getElementById("editor").style.color = color;
+}
+
 // Restore auto-saved content
 window.onload = function () {
     var autosavedContent = localStorage.getItem("cedit_cloud_autosave");
