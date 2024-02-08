@@ -25,7 +25,9 @@
     <option value="Lucida Console, monospace">Lucida Console</option>
     <option value="Impact, sans-serif">Impact</option>
     <option value="Comic Sans MS, sans-serif">Comic Sans MS</option>
-    <button class="button" onclick="toggleBold()">Bold</button>
+    <!-- Add more font options as needed -->
+</select>
+        <button class="button" onclick="toggleBold()">Bold</button>
     <button class="button" onclick="toggleItalic()">Italic</button>
     <button class="button" onclick="toggleUnderline()">Underline</button>
     <button class="button" onclick="toggleCrossout()">Crossout</button>
@@ -33,10 +35,8 @@
     <button class="button" onclick="alignCenter()">Align Center</button>
     <button class="button" onclick="alignRight()">Align Right</button>
     <button class="button" onclick="alignJustify()">Align Justify</button>
-    <!-- Add more font options as needed -->
-</select>
     <textarea id="editor" oninput="smoothTyping()"></textarea><br>
-      <button class="button" onclick="loadFile()">Load from File</button>
+    <button class="button" onclick="loadFile()">Load from File</button>
     <button class="button" onclick="saveFile()">Save</button>
     <button class="button" onclick="clearEditor()">Clear</button><br><br>
     Background Color: <input type="color" id="bgColorPicker" onchange="changeBackgroundColor()">
