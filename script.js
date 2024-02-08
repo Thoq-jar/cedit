@@ -68,6 +68,15 @@ function toggleHighContrast() {
     }
 }
 
+// Generate font size options dynamically
+var fontSizePicker = document.getElementById("fontSizePicker");
+for (var i = 1; i <= 500; i++) {
+    var option = document.createElement("option");
+    option.value = i + "px";
+    option.textContent = i;
+    fontSizePicker.appendChild(option);
+}
+
 function changeFontFamily() {
     var fontFamily = document.getElementById("fontFamilyPicker").value;
     document.getElementById("editor").style.fontFamily = fontFamily;
