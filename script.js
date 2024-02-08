@@ -68,38 +68,68 @@ function toggleHighContrast() {
     }
 }
 
+function changeFontFamily() {
+    var fontFamily = document.getElementById("fontFamilyPicker").value;
+    document.getElementById("editor").style.fontFamily = fontFamily;
+}
+
 function toggleBold() {
     document.execCommand("bold", false, null);
+    updateStyle();
 }
 
 function toggleItalic() {
     document.execCommand("italic", false, null);
+    updateStyle();
 }
 
 function toggleUnderline() {
     document.execCommand("underline", false, null);
+    updateStyle();
 }
 
 function toggleCrossout() {
     document.execCommand("strikeThrough", false, null);
+    updateStyle();
 }
 
 function alignLeft() {
     document.execCommand("justifyLeft", false, null);
+    updateStyle();
 }
 
 function alignCenter() {
     document.execCommand("justifyCenter", false, null);
+    updateStyle();
 }
 
 function alignRight() {
     document.execCommand("justifyRight", false, null);
+    updateStyle();
 }
 
 function alignJustify() {
     document.execCommand("justifyFull", false, null);
+    updateStyle();
 }
 
+function updateStyle() {
+    var fontFamily = document.getElementById("fontFamilyPicker").value;
+    var isBold = document.queryCommandState("bold");
+    var isItalic = document.queryCommandState("italic");
+    var isUnderline = document.queryCommandState("underline");
+    var isCrossout = document.queryCommandState("strikeThrough");
+    var textAlign = document.queryCommandValue("justify");
+
+    var style = "font-family: " + fontFamily + ";";
+    if (isBold) style += " font-weight: bold;";
+    if (isItalic) style += " font-style: italic;";
+    if (isUnderline) style += " text-decoration: underline;";
+    if (isCrossout) style += " text-decoration: line-through;";
+    style += " text-align: " + textAlign + ";";
+
+    document.getElementById("editor").setAttribute("style", style);
+}
 
 function loadFile() {
     var fileInput = document.createElement('input');
