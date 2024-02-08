@@ -68,6 +68,39 @@ function toggleHighContrast() {
     }
 }
 
+function toggleBold() {
+    document.execCommand("bold", false, null);
+}
+
+function toggleItalic() {
+    document.execCommand("italic", false, null);
+}
+
+function toggleUnderline() {
+    document.execCommand("underline", false, null);
+}
+
+function toggleCrossout() {
+    document.execCommand("strikeThrough", false, null);
+}
+
+function alignLeft() {
+    document.execCommand("justifyLeft", false, null);
+}
+
+function alignCenter() {
+    document.execCommand("justifyCenter", false, null);
+}
+
+function alignRight() {
+    document.execCommand("justifyRight", false, null);
+}
+
+function alignJustify() {
+    document.execCommand("justifyFull", false, null);
+}
+
+
 function loadFile() {
     var fileInput = document.createElement('input');
     fileInput.type = 'file';
