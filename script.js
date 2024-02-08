@@ -100,6 +100,11 @@ function toggleLightMode() {
     }
 }
 
+// Function to show about the editor
+function about() {
+    alert("CEdit version 2.1 runing WebOS 1.1 developed by Thoq");
+}
+
 // Auto-save functionality
 setInterval(function () {
     var textToSave = document.getElementById("editor").value;
