@@ -58,6 +58,8 @@ function toggleHighContrast() {
     } else {
         body.style.backgroundColor = "black";
         editor.style.backgroundColor = "black";
+        body.style.color = white;
+        editor.style.color = white;
     }
 }
 
@@ -74,7 +76,6 @@ function toggleLightMode() {
         editor.classList.add("light-mode");
     }
 }
-
 
 // Auto-save functionality
 setInterval(function () {
