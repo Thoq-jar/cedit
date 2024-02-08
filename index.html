@@ -27,7 +27,18 @@
     <option value="Comic Sans MS, sans-serif">Comic Sans MS</option>
     <!-- Add more font options as needed -->
 </select>
-        <button class="button" onclick="toggleBold()">Bold</button>
+    <select id="fontSizePicker" onchange="changeFontSize()">
+        <option value="12px">12</option>
+        <option value="14px">14</option>
+        <option value="16px">16</option>
+        <option value="18px">18</option>
+        <option value="20px">18</option>
+        <option value="22px">18</option>
+        <option value="24px">18</option>
+        <option value="26px">18</option>
+        <!-- Add more font size options as needed -->
+    </select>
+    <button class="button" onclick="toggleBold()">Bold</button>
     <button class="button" onclick="toggleItalic()">Italic</button>
     <button class="button" onclick="toggleUnderline()">Underline</button>
     <button class="button" onclick="toggleCrossout()">Crossout</button>
