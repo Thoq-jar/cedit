@@ -49,6 +49,11 @@ function smoothTyping() {
     document.querySelector(".container").style.animation = "pageSlideUp 0.5s ease";
 }
 
+function changeFontFamily() {
+    var fontFamily = document.getElementById("fontFamilyPicker").value;
+    document.getElementById("editor").style.fontFamily = fontFamily;
+}
+
 function toggleHighContrast() {
     var body = document.body;
     var editor = document.getElementById("editor");
