@@ -77,6 +77,18 @@ for (var i = 1; i <= 500; i++) {
     fontSizePicker.appendChild(option);
 }
 
+// Function to change font size from select element
+function changeFontSize() {
+    var fontSize = document.getElementById("fontSizePicker").value;
+    document.getElementById("editor").style.fontSize = fontSize;
+}
+
+// Function to change font size from input field
+function changeFontSizeFromInput() {
+    var fontSize = document.getElementById("fontSizeInput").value;
+    document.getElementById("editor").style.fontSize = fontSize + "px";
+}
+
 function changeFontFamily() {
     var fontFamily = document.getElementById("fontFamilyPicker").value;
     document.getElementById("editor").style.fontFamily = fontFamily;
