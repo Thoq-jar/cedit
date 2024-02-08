@@ -113,6 +113,11 @@ function alignJustify() {
     updateStyle();
 }
 
+function changeFontSize() {
+    var fontSize = document.getElementById("fontSizePicker").value;
+    document.getElementById("editor").style.fontSize = fontSize;
+}
+
 function updateStyle() {
     var fontFamily = document.getElementById("fontFamilyPicker").value;
     var isBold = document.queryCommandState("bold");
