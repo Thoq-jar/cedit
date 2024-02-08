@@ -119,8 +119,8 @@ function changeBackgroundColor() {
 
 function changeTextColor() {
     var color = document.getElementById("bgColorPicker").value;
-    document.body.style.color = color;
-    document.getElementById("editor").style.color = color;
+    document.body.style.Color = color;
+    document.getElementById("editor").style.Color = color;
 }
 
 // Restore auto-saved content
