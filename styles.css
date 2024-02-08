@@ -30,12 +30,19 @@ body {
 }
 
 .light-mode {
-    #editor
-{
-    background-color: white;
+    #editor {
     color: black;
+    background-color: white;
 }
     color: black;
     background-color: white;
 }
 
+.high-contrast {
+    #editor {
+    color: white;
+    background-color: black;
+}
+    color: white;
+    background-color: black;
+}
