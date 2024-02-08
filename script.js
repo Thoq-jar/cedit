@@ -44,16 +44,49 @@ function showMessage(message, color) {
 function smoothTyping() {
     clearTimeout(timer);
     var timer = setTimeout(function () {
-        document.querySelector(".container").style.animation = "none"; // Remove animation after typing stops
+        document.querySelector(".container").style.animation = "none";
     }, 500);
-    document.querySelector(".container").style.animation = "pageSlideUp 0.5s ease"; // Apply animation
+    document.querySelector(".container").style.animation = "pageSlideUp 0.5s ease";
 }
+
+function toggleHighContrast() {
+    var body = document.body;
+    var editor = document.getElementById("editor");
+    if (body.style.backgroundColor === "black") {
+        body.style.backgroundColor = "";
+        editor.style.backgroundColor = "";
+    } else {
+        body.style.backgroundColor = "black";
+        editor.style.backgroundColor = "black";
+    }
+}
+
+function toggleLightMode() {
+    var body = document.body;
+    var editor = document.getElementById("editor");
+    if (body.classList.contains("light-mode")) {
+        // Switch to default mode
+        body.classList.remove("light-mode");
+        editor.classList.remove("light-mode");
+    } else {
+        // Switch to light mode
+        body.classList.add("light-mode");
+        editor.classList.add("light-mode");
+    }
+}
+
 
 // Auto-save functionality
 setInterval(function () {
     var textToSave = document.getElementById("editor").value;
     localStorage.setItem("cedit_cloud_autosave", textToSave);
 }, AUTO_SAVE_INTERVAL);
+
+function changeBackgroundColor() {
+    var color = document.getElementById("bgColorPicker").value;
+    document.body.style.backgroundColor = color;
+    document.getElementById("editor").style.backgroundColor = color;
+}
 
 // Restore auto-saved content
 window.onload = function () {
