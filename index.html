@@ -10,19 +10,23 @@
 <body>
 
 <div class="container">
-    <textarea id="editor" oninput="smoothTyping()"></textarea><br>
-    <button class="button" onclick="saveFile()">Save</button>
-    <button class="button" onclick="clearEditor()">Clear</button><br><br>
-    Background Color: <input type="color" id="bgColorPicker" onchange="changeBackgroundColor()">
-    Text Color: <input type="color" id="textColorPicker" onchange="changeTextColor()">
-    Font Family: 
     <select id="fontFamilyPicker" onchange="changeFontFamily()">
-        <option value="Arial, sans-serif">Arial</option>
-        <option value="Helvetica, sans-serif">Helvetica</option>
-        <option value="Product Sans, sans-serif">Product Sans</option>
-        <option value="Lobster, cursive">Lobster</option>
-        <!-- Add more font options as needed -->
-    </select>
+    <option value="Arial, sans-serif">Arial</option>
+    <option value="Helvetica, sans-serif">Helvetica</option>
+    <option value="Product Sans, sans-serif">Product Sans</option>
+    <option value="Lobster, cursive">Lobster</option>
+    <option value="Tahoma, sans-serif">Tahoma</option>
+    <option value="Verdana, sans-serif">Verdana</option>
+    <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+    <option value="Georgia, serif">Georgia</option>
+    <option value="Times New Roman, serif">Times New Roman</option>
+    <option value="Courier New, monospace">Courier New</option>
+    <option value="Courier, monospace">Courier</option>
+    <option value="Lucida Console, monospace">Lucida Console</option>
+    <option value="Impact, sans-serif">Impact</option>
+    <option value="Comic Sans MS, sans-serif">Comic Sans MS</option>
+    <!-- Add more font options as needed -->
+</select>
     <button class="button" onclick="toggleBold()">Bold</button>
     <button class="button" onclick="toggleItalic()">Italic</button>
     <button class="button" onclick="toggleUnderline()">Underline</button>
@@ -32,6 +36,12 @@
     <button class="button" onclick="alignRight()">Align Right</button>
     <button class="button" onclick="alignJustify()">Align Justify</button>
     <button class="button" onclick="loadFile()">Load from File</button>
+    <textarea id="editor" oninput="smoothTyping()"></textarea><br>
+    <button class="button" onclick="saveFile()">Save</button>
+    <button class="button" onclick="clearEditor()">Clear</button><br><br>
+    Background Color: <input type="color" id="bgColorPicker" onchange="changeBackgroundColor()">
+    Text Color: <input type="color" id="textColorPicker" onchange="changeTextColor()">
+    Font Family: 
 </div>
 
 <script src="script.js"></script> <!-- Link to your JavaScript file -->
