@@ -8,8 +8,25 @@
     <link rel="icon" type="image/png" href="icon.png"> <!-- Link to your icon file -->
 </head>
 <body>
-
+    
     <div class="container">
+        <select id="fontFamilyPicker" onchange="changeFontFamily()">
+    <option value="Arial, sans-serif">Arial</option>
+    <option value="Helvetica, sans-serif">Helvetica</option>
+    <option value="Product Sans, sans-serif">Product Sans</option>
+    <option value="Tahoma, sans-serif">Tahoma</option>
+    <option value="Verdana, sans-serif">Verdana</option>
+    <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+    <option value="Georgia, serif">Georgia</option>
+    <option value="Times New Roman, serif">Times New Roman</option>
+    <option value="Courier New, monospace">Courier New</option>
+    <option value="Courier, monospace">Courier</option>
+    <option value="Lucida Console, monospace">Lucida Console</option>
+    <option value="Impact, sans-serif">Impact</option>
+    <option value="Comic Sans MS, sans-serif">Comic Sans MS</option>
+    <!-- Add more font options as needed -->
+</select>
+
         <textarea id="editor" oninput="smoothTyping()"></textarea><br>
         <button class="button" onclick="saveFile()">Save</button>
         <button class="button" onclick="clearEditor()">Clear</button><br><br>
