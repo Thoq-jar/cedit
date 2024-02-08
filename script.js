@@ -52,28 +52,51 @@ function smoothTyping() {
 function toggleHighContrast() {
     var body = document.body;
     var editor = document.getElementById("editor");
-    if (body.style.backgroundColor === "black") {
-        body.style.backgroundColor = "";
-        editor.style.backgroundColor = "";
+    if (body.classList.contains("high-contrast")) {
+        // Switch to regular mode
+        body.classList.remove("high-contrast");
+        editor.classList.remove("high-contrast");
     } else {
-        body.style.backgroundColor = "black";
-        editor.style.backgroundColor = "black";
-        body.style.color = white;
-        editor.style.color = white;
+        // Switch to high contrast mode
+        body.classList.add("high-contrast");
+        editor.classList.add("high-contrast");
     }
 }
+
+function loadFile() {
+    var fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.txt';
+    fileInput.onchange = function (event) {
+        var file = event.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function (event) {
+            document.getElementById('editor').value = event.target.result;
+        };
+        reader.readAsText(file);
+    };
+    fileInput.click();
+}
+
 
 function toggleLightMode() {
     var body = document.body;
     var editor = document.getElementById("editor");
+    var buttons = document.getElementsByClassName("button");
     if (body.classList.contains("light-mode")) {
         // Switch to default mode
         body.classList.remove("light-mode");
         editor.classList.remove("light-mode");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("light-mode");
+        }
     } else {
         // Switch to light mode
         body.classList.add("light-mode");
         editor.classList.add("light-mode");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.add("light-mode");
+        }
     }
 }
 
@@ -97,5 +120,3 @@ window.onload = function () {
     }
 
 };
-
-
