@@ -112,15 +112,14 @@ setInterval(function () {
 }, AUTO_SAVE_INTERVAL);
 
 function changeBackgroundColor() {
-    var color = document.getElementById("bgColorPicker").value;
-    document.body.style.backgroundColor = color;
-    document.getElementById("editor").style.backgroundColor = color;
+    var bgColor = document.getElementById("bgColorPicker").value;
+    document.body.style.backgroundColor = bgColor;
+    document.getElementById("editor").style.backgroundColor = bgColor;
 }
 
 function changeTextColor() {
-    var color = document.getElementById("bgColorPicker").value;
-    document.body.style.Color = color;
-    document.getElementById("editor").style.Color = color;
+    var textColor = document.getElementById("textColorPicker").value;
+    document.getElementById("editor").style.color = textColor;
 }
 
 // Restore auto-saved content
