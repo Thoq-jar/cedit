@@ -1,23 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEdit Cloud</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link CSS -->
-    <link rel="icon" type="image/png" href="icon.png"> <!-- Link Icon-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Product+Sans&display=swap"> <!-- Link Font-->
-
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="icon" type="image/png" href="icon.png"> <!-- Link to your icon file -->
 </head>
 <body>
 
     <div class="container">
         <textarea id="editor" oninput="smoothTyping()"></textarea><br>
         <button class="button" onclick="saveFile()">Save</button>
-        <button class="button" onclick="clearEditor()">Clear</button>
+        <button class="button" onclick="clearEditor()">Clear</button><br><br>
+        Background Color: <input type="color" id="bgColorPicker" onchange="changeBackgroundColor()">
+        <button class="button" onclick="toggleHighContrast()">High Contrast</button>
+        <button class="button" onclick="toggleLightMode()">Toggle Color Mode</button>
     </div>
 
-    <script src="script.js"></script> <!-- Link JavaScript -->
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 
 </body>
 </html>
