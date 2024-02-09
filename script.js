@@ -1,15 +1,17 @@
 // Function to save the file
 function saveFile() {
-    var textToSave = document.getElementById("editor").value;
-    var blob = new Blob([textToSave], { type: "text/plain" });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement("a");
-    a.href = url;
-    a.download = "cedit_cloud.txt";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    showMessage("File saved successfully!", "green");
+    var fileName = prompt("Enter a filename:", "cedit_cloud.txt");
+    if (fileName != null && fileName != "") {
+        var textToSave = document.getElementById("editor").value;
+        var blob = new Blob([textToSave], { type: "text/plain" });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
 }
 
 // Function to clear the editor
@@ -196,7 +198,7 @@ function toggleLightMode() {
 
 // Function to show about the editor
 function about() {
-    alert("CEdit version 2.1 runing WebOS 1.1 developed by Thoq");
+    alert("CEdit version 2.2 runing WebOS 1.2 developed by Tristan");
 }
 
 // Auto-save functionality
@@ -209,7 +211,7 @@ function changeBackgroundColor() {
     var bgColor = document.getElementById("bgColorPicker").value;
     document.body.style.backgroundColor = bgColor;
     document.getElementById("editor").style.backgroundColor = bgColor;
-    
+
     // Automatically adjust text color based on background color
     var textColor = getTextColor(bgColor);
     document.getElementById("editor").style.color = textColor;
