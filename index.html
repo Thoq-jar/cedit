@@ -4,53 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEdit Cloud</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <link rel="icon" type="image/png" href="icon.png"> <!-- Link to your icon file -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="icon.png">
 </head>
 <body>
 
-<div class="container">
-    <select id="fontFamilyPicker" onchange="changeFontFamily()">
-    <option value="Arial, sans-serif">Arial</option>
-    <option value="Helvetica, sans-serif">Helvetica</option>
-    <option value="Product Sans, sans-serif">Product Sans</option>
-    <option value="Lobster, cursive">Lobster</option>
-    <option value="Tahoma, sans-serif">Tahoma</option>
-    <option value="Verdana, sans-serif">Verdana</option>
-    <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
-    <option value="Georgia, serif">Georgia</option>
-    <option value="Times New Roman, serif">Times New Roman</option>
-    <option value="Courier New, monospace">Courier New</option>
-    <option value="Courier, monospace">Courier</option>
-    <option value="Lucida Console, monospace">Lucida Console</option>
-    <option value="Impact, sans-serif">Impact</option>
-    <option value="Comic Sans MS, sans-serif">Comic Sans MS</option>
-    <!-- Add more font options as needed -->
-</select>
-   <select id="fontSizePicker" onchange="changeFontSize()">
-        <!-- Font size options will be added dynamically using JavaScript -->
-    </select>
-    <input type="number" id="fontSizeInput" min="1" max="500" placeholder="Font size" onchange="changeFontSizeFromInput()">
-    </select>
-    <button class="button" onclick="toggleBold()">Bold</button>
-    <button class="button" onclick="toggleItalic()">Italic</button>
-    <button class="button" onclick="toggleUnderline()">Underline</button>
-    <button class="button" onclick="toggleCrossout()">Crossout</button>
-    <button class="button" onclick="alignLeft()">Align Left</button>
-    <button class="button" onclick="alignCenter()">Align Center</button>
-    <button class="button" onclick="alignRight()">Align Right</button>
-    <button class="button" onclick="alignJustify()">Align Justify</button>
-    <textarea id="editor" oninput="smoothTyping()"></textarea><br>
-    <button class="button" onclick="about()">About</button>
-    <button class="button" onclick="loadFile()">Load from File</button>
-    <button class="button" onclick="saveFile()">Save</button>
-    <button class="button" onclick="clearEditor()">Clear</button><br><br>
-    <button class="button" onclick="toggleLightMode()">Toggle Color Mode</button>
-    <button class="button" onclick="toggleHighContrast()">High Contrast</button>
-    Background Color: <input type="color" id="bgColorPicker" onchange="changeBackgroundColor()">
-</div>
+    <div class="container">
+        <label for="fontFamilyPicker"></label><select id="fontFamilyPicker" onchange="changeFontFamily()">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Helvetica, sans-serif">Helvetica</option>
+            <option value="Product Sans, sans-serif">Product Sans</option>
+            <option value="Lobster, cursive">Lobster</option>
+            <option value="Tahoma, sans-serif">Tahoma</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+            <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="Times New Roman, serif">Times New Roman</option>
+            <option value="Courier New, monospace">Courier New</option>
+            <option value="Courier, monospace">Courier</option>
+            <option value="Lucida Console, monospace">Lucida Console</option>
+            <option value="Impact, sans-serif">Impact</option>
+            <option value="Comic Sans MS, sans-serif">Comic Sans MS</option>
+        </select>
 
-<script src="script.js"></script> <!-- Link to your JavaScript file -->
+        <label for="fontSizePicker"></label><select id="fontSizePicker" onchange="changeFontSize()">
+        </select>
+
+        <label for="fontSizeInput"></label><input type="number" id="fontSizeInput" min="1" max="500" placeholder="Font size" onchange="changeFontSizeFromInput()">
+        <button class="button" onclick="toggleBold()">Bold</button>
+        <button class="button" onclick="toggleItalic()">Italic</button>
+        <button class="button" onclick="toggleUnderline()">Underline</button>
+        <button class="button" onclick="toggleCrossout()">Crossout</button>
+        <button class="button" onclick="alignLeft()">Align Left</button>
+        <button class="button" onclick="alignCenter()">Align Center</button>
+        <button class="button" onclick="alignRight()">Align Right</button>
+        <button class="button" onclick="alignJustify()">Align Justify</button>
+        <label for="editor"></label><textarea id="editor" oninput="smoothTyping()"></textarea><br>
+        <button class="button" onclick="loadFile()">Load from File</button>
+        <button class="button" onclick="saveFile()">Save</button>
+        <button class="button" onclick="clearEditor()">Clear</button><br><br>
+        <button class="button" onclick="toggleLightMode()">Toggle Color Mode</button>
+        <button class="button" onclick="toggleHighContrast()">High Contrast</button>
+        <button class="button" onclick="about()">About</button>
+        Background Color: <label for="bgColorPicker"></label><input type="color" id="bgColorPicker" onchange="changeBackgroundColor()">
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
