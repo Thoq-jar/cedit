@@ -1,6 +1,6 @@
 // Function to save the file
 function saveFile() {
-    var fileName = prompt("Enter a filename:", "cedit_cloud.txt");
+    var fileName = prompt("Enter a filename:", "zephyr_cloud.txt");
     if (fileName != null && fileName != "") {
         var textToSave = document.getElementById("editor").value;
         var blob = new Blob([textToSave], { type: "text/plain" });
@@ -16,7 +16,7 @@ function saveFile() {
 
 // Function to clear the editor
 function clearEditor() {
-    var confirmation = confirm("Are you sure you want to clear the editor?");
+    var confirmation = confirm("Are you sure you want to clear your project? (Make sure you saved anything you wanted to keep!)");
     if (confirmation) {
         document.getElementById("editor").value = "";
     }
@@ -198,13 +198,14 @@ function toggleLightMode() {
 
 // Function to show about the editor
 function about() {
-    alert("CEdit version 2.2 runing WebOS 1.2 developed by Tristan");
+    alert("Zephyr version 3.3.24 (Nova) running NodeJS powered by Microsoft Azure | developed by Tristan");
 }
 
 // Auto-save functionality
+let AUTO_SAVE_INTERVAL = 100;
 setInterval(function () {
-    var textToSave = document.getElementById("editor").value;
-    localStorage.setItem("cedit_cloud_autosave", textToSave);
+    const textToSave = document.getElementById("editor").value;
+    localStorage.setItem("zephyr_cloud_autosave", textToSave);
 }, AUTO_SAVE_INTERVAL);
 
 function changeBackgroundColor() {
@@ -233,7 +234,7 @@ function getTextColor(bgColor) {
 
 // Restore auto-saved content
 window.onload = function () {
-    var autosavedContent = localStorage.getItem("cedit_cloud_autosave");
+    var autosavedContent = localStorage.getItem("zephyr_cloud_autosave");
     if (autosavedContent) {
         document.getElementById("editor").value = autosavedContent;
     }
